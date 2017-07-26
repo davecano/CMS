@@ -1,0 +1,42 @@
+body	{
+	margin:0;
+	background-color: #ebebeb;
+    font-family: Segoe UI;
+	font-size: small; 
+}
+.wrapper	{
+	border:solid 0px #333;
+	margin-left: 35px;
+	text-align: center;
+	padding:5px;
+	margin-bottom: 50px;
+}
+.form	{
+	width: 478px;
+	height: 264px;
+	margin:auto;
+	border:solid 0px #a00;
+	font-family: Segoe UI;
+	font-size: small; 
+	background-image: url(../images/login_box.png);
+}
+.form label	{
+	font-family: Segoe UI;
+	font-size: large;
+	font-weight: bold;
+	display: block;
+	color: #555;
+	margin:10px 0px 10px 0px;
+}
+.form_field	{
+	width: 80%;
+	margin: auto;
+	}
+.form_field td	{
+	text-align: left;
+	padding:2px;
+}
+.form_field .right	{
+	text-align: right;
+}
+

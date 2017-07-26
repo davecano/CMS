@@ -1,0 +1,1013 @@
+﻿body, p, form, h1, h2, h3, h4, h5, h6, td, th, table, div, ul, li, ol, dl, dt, dd, img, input, select {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  overflow-x:hidden;
+}
+html {
+  overflow-x:hidden;
+}
+
+body, td, tr {
+    font: 12px/1.231 verdana,arial,helvetica,clean,sans-serif;
+    color: #333333;
+    line-height: 150%;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: #585858;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #0766A6;
+}
+
+.border01 {
+    border: #E3E3E3 1px solid;
+}
+
+img {
+    border: 0;
+}
+
+ul, ul li {
+    list-style-type: none;
+}
+
+.clear {
+    clear: both;
+    height: 0px;
+    line-height: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    font-size: 0px;
+}
+
+.blank10 {
+    height: 10px;
+    overflow: hidden;
+    line-height: 0;
+    font-size: 0;
+    clear: both;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.font14 {
+    font-size: 14px;
+}
+/*网站头部*/
+.top {
+    width: auto;
+    margin: auto;
+    height:30%;
+}
+
+.topright {
+    position: relative;
+    top: 0px;
+    left: 735px;
+    padding-top: 3px;
+    height: 27px;
+    width: 246px;
+    overflow: hidden;
+    background: url(../images/topright.jpg) no-repeat left top;
+}
+
+    .topright li {
+        margin-left: 15px;
+        float: left;
+        display: inline;
+        height: 20px;
+        line-height: 20px;
+        padding-left: 20px;
+        background-image: url(../images/bggif.gif);
+        background-repeat: no-repeat;
+    }
+
+    .topright .li01 {
+        background-position: left 2px;
+    }
+
+    .topright .li02 {
+        background-position: left -18px;
+    }
+
+    .topright .li03 {
+        background-position: left -40px;
+    }
+
+.logo {
+    float: left;
+    width: 502px;
+    height: 71px;
+    overflow: hidden;
+    margin-left: 30px;
+    display: inline;
+}
+
+.righttel {
+    float: right;
+    width: 200px;
+    height: 30px;
+    overflow: hidden;
+    margin-right: 40px;
+    margin-top: 10px;
+    display: inline;
+}
+
+.webnav {
+    clear: both;
+    padding-top: 15px;
+    text-align: right;
+    height: 22px;
+    overflow: hidden;
+}
+
+    .webnav ul {
+        /*display:inline-block;*/
+        float:left;
+        padding-right: 20px;
+    }
+
+    .webnav li, .webnav li a {
+        float: left;
+        display: inline-block;
+        height: 22px;
+        line-height: 22px;
+        font-family: '微软雅黑',Arial;
+        font-weight: bold;
+    }
+
+    .webnav li {
+        margin-right: 10px;
+        padding-left: 10px;
+    }
+
+        .webnav li a {
+            padding-right: 10px;
+        }
+
+            .webnav li a:link, .webnav li a:visited {
+                color: #0766A6;
+            }
+
+        .webnav li.licur, .webnav li.licur a {
+            background-image: url(../images/navbg.gif);
+            background-repeat: no-repeat;
+        }
+
+            .webnav li.licur a {
+                background-position: right -22px;
+            }
+
+                .webnav li.licur a:link, .webnav li.licur a:visited, .webnav li.licur a:hover {
+                    color: #FFFFFF;
+                }
+
+.banner {
+    width: 1002px;
+    margin: auto;
+    height: 295px;
+    overflow: hidden;
+    background: url(../images/bannerbg.jpg) no-repeat left top;
+    margin-top: 10px;
+    position: relative;
+}
+
+#banlbar, #banrbar {
+    z-index: 99;
+    background-image: url(../images/bannerbat.gif);
+    background-repeat: no-repeat;
+    width: 43px;
+    height: 53px;
+    overflow: hidden;
+    cursor: pointer;
+    position: absolute;
+    top: 120px;
+}
+
+#banlbar {
+    background-position: left top;
+    left: 6px;
+}
+
+    #banlbar.mhover {
+        background-position: left -53px;
+    }
+
+#banrbar {
+    background-position: -43px top;
+    right: 6px;
+}
+
+    #banrbar.mhover {
+        background-position: -43px -53px;
+    }
+
+#banh {
+    width: 968px;
+    height: 279px;
+    overflow: hidden;
+    padding-top: 7px;
+    padding-left: 17px;
+}
+
+    #banh li {
+        display: none;
+    }
+
+        #banh li.on {
+            display: list-item;
+        }
+/*首页主体内容*/
+.index_con {
+    width: 970px;
+    margin: auto;
+    background: url(../images/conbg.jpg) repeat-y;
+    margin-top: 5px;
+    padding: 5px 16px 0 16px;
+}
+
+.ind_news {
+    /*width: 324px;*/
+    width:477px;
+    float: left;
+}
+
+    .ind_news .title {
+        height: 34px;
+        overflow: hidden;
+        background: url(../images/indh2.png) no-repeat left top;
+        width: 100%;
+    }
+
+.title a.indmore {
+    width: 38px;
+    height: 9px;
+    overflow: hidden;
+    border: none;
+    float: right;
+    margin-top: 15px;
+    margin-right: 20px;
+    display: inline-block;
+    background: url(../images/more.gif) no-repeat left top;
+}
+
+.ind_news .title h2, .ind_pro .title h2, .adoutus .title h2, .alli .title h2 {
+    text-indent: -9999em;
+}
+
+.borl_r {
+ border: #E2E2E2 1px solid;
+width:368px;
+height:273px;
+}
+
+.indlist {
+    background: url(../images/indlbg.gif) repeat-x left top;
+    overflow: hidden;
+}
+
+.ind_newsul {
+    height: 125px;
+    padding: 10px 20px 0 20px;
+}
+
+.indlist li {
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    background: url(../images/lisits.gif) no-repeat left 8px;
+    padding-left: 13px;
+}
+
+.indnewbot {
+    background: url(../images/indh2.png) no-repeat left -34px;
+    height: 7px;
+    overflow: hidden;
+}
+
+.ind_pro {
+    width: 343px;
+    float: left;
+    margin-left: 8px;
+    display: inline;
+}
+
+    .ind_pro .title {
+        height: 34px;
+        overflow: hidden;
+        background: url(../images/indh2.png) no-repeat left -41px;
+        width: 100%;
+    }
+
+.indpic {
+    width: 341px;
+    background: url(../images/indlbg.gif) repeat-x left top;
+    overflow: hidden;
+    position: relative;
+}
+
+.indprobot {
+    background: url(../images/indh2.png) no-repeat left -75px;
+    height: 7px;
+    overflow: hidden;
+}
+
+a#prev, a#next {
+    background: url(../images/probar.png) no-repeat left top;
+    width: 19px;
+    height: 19px;
+    display: block;
+    position: absolute;
+    top: 50px;
+    z-index: 100;
+}
+
+a#prev {
+    background-position: 0 0;
+    left: 8px;
+}
+
+    a#prev:hover {
+        background-position: 0 -19px;
+    }
+
+a#next {
+    background-position: -19px 0;
+    right: 8px;
+}
+
+    a#next:hover {
+        background-position: -19px -19px;
+    }
+
+#gun {
+    width: 270px;
+    margin: 0 auto;
+    padding-top: 18px;
+    height: 115px;
+    overflow: hidden;
+}
+
+    #gun ul {
+        width: 9999px;
+    }
+
+    #gun li {
+        float: left;
+        margin-right: 10px;
+        width: 125px;
+        padding: 0 2px;
+        text-align: center;
+        overflow: hidden;
+    }
+
+        #gun li img {
+            border: #CCCCCC 2px solid;
+        }
+
+        #gun li h3 {
+            height: 25px;
+            line-height: 25px;
+            overflow: hidden;
+            font-size: 12px;
+        }
+
+.ind_contact {
+    /*width: 287px;*/
+    width:477px;
+    float: right;
+}
+
+    .ind_contact h2 {
+        background: url(../images/indh2.png) no-repeat left -82px;
+        height: 34px;
+        text-indent: -9999em;
+        overflow: hidden;
+    }
+
+.catacta {
+    background: url(../images/indlbg.gif) repeat-x left top;
+    padding: 10px;
+    line-height: 21px;
+}
+
+.catacta_bot {
+    background: url(../images/indh2.png) no-repeat left -116px;
+    height: 7px;
+    overflow: hidden;
+}
+
+.xiadao {
+    margin-top: 10px;
+    border: #E2E2E2 1px solid;
+}
+
+.bot_nav {
+    border-top: #E7E7E7 10px solid;
+    padding-top: 10px;
+}
+
+.bottom {
+    width: 1000px;
+    margin: auto;
+}
+
+.botdiv {
+    float: left;
+    width: 170px;
+    margin-left: 25px;
+    display: inline;
+}
+
+    .botdiv h2 {
+        height: 30px;
+        line-height: 30px;
+        font-family: '微软雅黑',Arial;
+        font-size: 14px;
+    }
+
+    .botdiv li {
+        height: 21px;
+        line-height: 21px;
+        padding-left: 10px;
+        background: url(../images/icon01.gif) no-repeat left 7px;
+    }
+
+.adoutus {
+    width: 500px;
+    float: left;
+}
+
+    .adoutus .title {
+        height: 34px;
+        overflow: hidden;
+        background: url(../images/indh2.png) no-repeat left -123px;
+        width: 100%;
+    }
+
+.ina_acon {
+    background: url(../images/indlbg.gif) repeat-x;
+    padding: 5px 10px;
+    line-height: 21px;
+    text-indent: 2em;
+}
+
+.ina_abot {
+    background: url(../images/indh2.png) no-repeat left -157px;
+    height: 7px;
+    overflow: hidden;
+}
+
+.alli {
+    width: 462px;
+    float: right;
+    background: url(../images/indlbg.gif) repeat-x;
+}
+
+    .alli .title {
+        height: 34px;
+        overflow: hidden;
+        background: url(../images/indh2.png) no-repeat left -164px;
+        width: 100%;
+    }
+
+.anliacon {
+    padding: 5px 10px;
+}
+
+.alli_bot {
+    background: url(../images/indh2.png) no-repeat left -198px;
+    height: 7px;
+    overflow: hidden;
+}
+
+.anliacon p {
+    text-indent: 2em;
+    line-height: 21px;
+    border-bottom: #CCCCCC 1px dashed;
+}
+
+.anli_k {
+    height: 52px;
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+    .anli_k li {
+        float: left;
+        margin: 0 4px;
+        width: 138px;
+        overflow: hidden;
+        display: inline;
+    }
+
+        .anli_k li img {
+            border: #CCCCCC 1px solid;
+        }
+
+.copyright {
+    clear: both;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    border-top: #EAEAEA 1px solid;
+    margin-top: 8px;
+    padding-left: 15px;
+}
+/*内容页左边*/
+.page_left {
+    width: 200px;
+    float: left;
+}
+
+.page_right {
+    width: 760px;
+    float: right;
+}
+
+.left_title {
+    background: url(../images/leftpng.png) no-repeat left top;
+    height: 23px;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-top: 10px;
+    color: #0E7AAD;
+}
+
+.leftbg {
+    background: url(../images/leftbg.png) repeat-x left top #FFFFFF;
+}
+
+.left_bot {
+    background: url(../images/indh2.png) no-repeat left -205px;
+    height: 6px;
+    overflow: hidden;
+}
+
+.classul {
+    padding: 5px 10px;
+}
+
+    .classul li {
+        height: 30px;
+        line-height: 30px;
+        padding-left: 20px;
+        background: url(../images/leftclass.png) no-repeat left 6px;
+        font-weight: bold;
+    }
+    /*.classul span{
+
+        display:block;
+        padding-left:5px
+
+    }
+    .classul a {
+    
+    background-color:#EEEEEE;
+    color:#006666;
+    display:block;
+    padding:5px 10px;
+    text-decoration:none;
+    text-align:center;
+    
+    }
+        .classul a:hover {     
+       background-color:#006666;
+       color:#ffffff;
+        }
+        .classul a:current {
+        background-color:#006666;
+        color:#ffffff;
+        }*/
+
+.magtop10 {
+    margin-top: 10px;
+}
+
+.pagetop {
+    height: 34px;
+    line-height: 34px;
+    padding-left: 40px;
+    background: url(../images/pagebg.gif) no-repeat left top;
+}
+
+    .pagetop h2 {
+    }
+
+.web_navi {
+    float: right;
+    margin-right: 20px;
+    display: inline;
+    background: url(../images/web_navi.gif) no-repeat left center;
+    padding-left: 30px;
+}
+
+.page_bot {
+    background: url(../images/pagebg.gif) no-repeat left -34px;
+    height: 7px;
+    overflow: hidden;
+}
+
+.newslist {
+  width:453px;
+margin-left:0px;
+
+}
+.newslist2 {
+  width:757px;
+margin-left:0px;
+
+}
+.newslisttop{
+padding-left:20px;
+
+}
+.newslist-show {
+    padding: 10px;	
+	
+	margin-left:10px;
+}
+
+    .newslist li {
+		
+        text-align: right;
+		padding-top:2px;
+		padding-bottom:2px;
+        padding-right: 0px;
+        height: 25px;
+        line-height: 25px;
+       list-style:none;
+        background: url(../images/lisits.gif) no-repeat 3px 8px;
+        padding-left: 20px;
+    }
+
+        .newslist li a {
+            display: inline-block;
+            float: left;
+        }
+
+        .newslist li span {
+           list-style:none;
+        }
+.newstitle{
+	display:inline-block;
+	width:368px;
+	height:32px;
+	background:#f5f5f5;
+	  border: #E2E2E2 1px solid;
+	}
+	.newstitle span{
+		background:#FFF;
+		color:#0265b2;
+		font-size:14px;
+		font-family:"宋体";
+		font-weight:bold;
+		padding:9px;
+		display:inline-block;
+		}
+	.newstitle a{
+		 margin-left:210px;
+		 font-size:12px;
+		 color:#4d8eac;}
+.epages {
+    padding-top: 20px;
+    text-align: center;
+    clear: both;
+}
+
+    .epages a {
+        display: inline-block;
+        margin: 3px 3px;
+        padding: 3px 7px;
+        border: #CCCCCC 1px solid;
+        vertical-align: middle;
+    }
+
+    .epages b {
+        display: inline-block;
+        margin: 3px 3px;
+        padding: 3px 7px;
+        border: #CD0000 1px solid;
+        vertical-align: middle;
+    }
+
+        .epages b.totle {
+            border: #CCCCCC 1px solid;
+            font-weight: normal;
+        }
+
+.patecopy {
+    line-height: 25px;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.search {
+    border: #D7D7D7 1px solid;
+    padding: 5px 10px;
+}
+
+.searchinp {
+    background: url(../images/search.gif) repeat-x;
+    height: 16px;
+    line-height: 16px;
+    padding: 2px;
+    width: 175px;
+    border: #E6E6E6 1px solid;
+}
+
+.searchbon {
+    background: url(../images/searchbon.gif) no-repeat left top;
+    width: 64px;
+    height: 21px;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+}
+
+.searchp02 {
+    padding-top: 5px;
+    text-align: right;
+}
+
+.searchp01 {
+    height: 25px;
+    line-height: 25px;
+    font-weight: bold;
+}
+
+.news_con {
+    padding: 10px 20px;
+}
+
+    .news_con h1 {
+        line-height: 40px;
+        font-family: '微软雅黑',Arial;
+        font-size: 20px;
+        text-align: center;
+    }
+
+.nets_zd {
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    text-align: center;
+    background: #F8F8F8;
+}
+
+.news_xq {
+    padding-top: 5px;
+}
+
+.pageback {
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: #D7D7D7 1px solid;
+}
+
+.xq_np {
+    padding: 5px;
+}
+
+    .xq_np li {
+        height: 21px;
+        line-height: 21px;
+        overflow: hidden;
+        background: url(../images/icon01.gif) no-repeat left 7px;
+        padding-left: 15px;
+    }
+/*产品展示页*/
+.picul {
+    float: left;
+    width: 755px;
+    padding-top: 10px;
+}
+
+    .picul li {
+        width: 196px;
+        padding: 4px;
+        background: url(../images/picbg.jpg) no-repeat left top;
+        overflow: hidden;
+        float: left;
+        margin-left: 40px;
+        margin-bottom: 10px;
+        display: inline;
+    }
+
+        .picul li p {
+            padding-top: 5px;
+            height: 25px;
+            line-height: 25px;
+            overflow: hidden;
+            text-align: center;
+            font-weight: bold;
+        }
+/*产品展示页*/
+.pic_xq {
+    padding: 10px;
+}
+
+.pic_xqa {
+    line-height: 21px;
+}
+
+    .pic_xqa h1 {
+        font-family: '微软雅黑',Arial;
+        font-size: 20px;
+        background: url(../images/picxg01.gif) no-repeat left 3px;
+        line-height: 32px;
+        padding-left: 35px;
+    }
+
+.xgpic {
+    padding-top: 10px;
+}
+
+    .xgpic h2 {
+        height: 25px;
+        line-height: 25px;
+        background: url(../images/lisits.gif) no-repeat 5px center #ECECEC;
+        padding-left: 25px;
+        color: #0A6D9C;
+    }
+
+.pixxg {
+    float: left;
+    width: 739px;
+    padding: 5px 0;
+}
+
+    .pixxg li {
+        width: 130px;
+        float: left;
+        margin: 0 4px 0 6px;
+        overflow: hidden;
+        display: inline;
+        padding: 3px;
+        background: url(../images/picxqbg.jpg) no-repeat left top;
+    }
+
+        .pixxg li p {
+            height: 25px;
+            line-height: 25px;
+            overflow: hidden;
+            text-align: center;
+            font-weight: bold;
+        }
+/*单页图文*/
+.singpage {
+    padding: 10px;
+    line-height: 21px;
+}
+
+.red {
+    color: #FF0000;
+}
+
+.luiyanimg {
+    float: right;
+    margin-right: 15px;
+    margin-left: 15px;
+    display: inline;
+}
+
+.tomtoluyan {
+    font-size: 14px;
+}
+
+    .tomtoluyan h2 {
+        height: 25px;
+        line-height: 25px;
+    }
+
+.luyqninput {
+    border: #CCCCCC 1px solid;
+    padding: 2px;
+    background: url(../images/inputbg.gif) repeat-x;
+    height: 19px;
+    line-height: 19px;
+}
+
+.tomtoluyan p {
+    padding-top: 10px;
+}
+
+    .tomtoluyan p span {
+        color: #FF0000;
+        margin-left: 10px;
+    }
+
+.luyqninaarea {
+    vertical-align: bottom;
+    width: 490px;
+    height: 120px;
+    border: #CCCCCC 1px solid;
+}
+
+.luiyabot {
+    padding: 3px 8px;
+    color: #FFFFFF;
+    background: #033D58;
+    cursor: pointer;
+    border: none;
+}
+
+.touxiang {
+    float: right;
+    margin-right: 15px;
+    margin-top: 20px;
+    width: 82px;
+    overflow: hidden;
+    display: inline;
+}
+
+.iteleft {
+    float: left;
+    width: 90px;
+    overflow: hidden;
+    text-align: center;
+    background: url(../images/lite01.gif) no-repeat left 78px;
+}
+
+    .iteleft p {
+        text-align: center;
+        height: 25px;
+        line-height: 25px;
+        padding-top: 5px;
+        overflow: hidden;
+        font-weight: bold;
+    }
+
+.liuyanul {
+    padding-top: 10px;
+}
+
+    .liuyanul li {
+        height: auto !important;
+        height: 110px;
+        min-height: 110px;
+        margin-top: 10px;
+    }
+
+.iteright {
+    width: 635px;
+    margin-left: 90px;
+}
+
+.lytime {
+    text-align: right;
+    padding-right: 20px;
+    height: 32px;
+    line-height: 32px;
+    overflow: hidden;
+    background: url(../images/lite02.gif) no-repeat left top;
+    color: #003366;
+}
+
+.lymr {
+    background: url(../images/lite03.gif) repeat-y right top;
+    line-height: 25px;
+    padding-left: 25px;
+}
+
+.lite04 {
+    background: url(../images/lite04.gif) no-repeat left top;
+    height: 7px;
+    overflow: hidden;
+}
+
+.lite05 {
+    background: url(../images/lite05.gif) no-repeat left top;
+    height: 7px;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+.alistul li.newsrenwu p {
+    text-indent: 0px;
+    height: auto !important;
+    height: 85px;
+    min-height: 85px;
+}
+	.tt{float:left;
+}
+	.tt2{clear:both;
+}

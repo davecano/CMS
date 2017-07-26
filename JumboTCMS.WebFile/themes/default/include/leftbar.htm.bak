@@ -1,0 +1,41 @@
+<td width="241px" valign="top">
+    <table width="100%" border="0">
+   <jcms:classloop channelid="10"  repeatnum="2" orderfield="id" ordertype="asc">
+        <tr>
+            <td align="left" valign="middle">
+                <p class="menu-left-title">{$ClassName}</p>
+               <jcms:contentloop  channelid="10" classid="{$ClassId}"   repeatnum="1" ordertype="asc"  fields="title"><#foreach>
+                <p class="menu-left"><a href="$_{url}" ><img src="{site.Dir}themes/default/images/${field.title}" width="180" height="34" /></a> </p>
+<#/foreach> 
+   </jcms:contentloop>
+           <p class="menu-left"><a href="http://baidu.com" ><img src="{site.Dir}themes/default/images/lb2.png" width="180" height="34" /></a> </p>
+           <p class="menu-left"><a href="http://baidu.com"><img src="{site.Dir}themes/default/images/lb3.png" width="180" height="34" /></a> </p>
+           <p class="menu-left"><a href="http://baidu.com"><img src="{site.Dir}themes/default/images/lb4.png" width="180" height="34" /></a> </p>
+            </td>
+        </tr>
+   </jcms:classloop>
+   <jcms:classloop channelid="10"  repeatnum="1" orderfield="id" ordertype="desc">
+        <tr>
+            <td align="left" valign="middle">
+                <p class="menu-left-title">{$ClassName}</p>
+               <jcms:contentloop  channelid="10" classid="{$ClassId}"   repeatnum="1" ordertype="asc"  fields="title"><#foreach>
+                <p class="menu-left"><a href="$_{url}" ><img src="{site.Dir}themes/default/images/${field.title}" width="180" height="34" /></a> </p>
+<#/foreach> 
+   </jcms:contentloop>
+           <p class="menu-left"><a href="http://baidu.com" ><img src="{site.Dir}themes/default/images/lb2.png" width="180" height="34" /></a> </p>
+           <p class="menu-left"><a href="http://baidu.com"><img src="{site.Dir}themes/default/images/lb4.png" width="180" height="34" /></a> </p>
+            </td>
+        </tr>
+   </jcms:classloop>
+        <tr>
+            <td>
+      <p class="menu-left-title">使用指南</p>
+ <jcms:contentloop  channelid="9" classid="7"   repeatnum="3" ordertype="asc"  fields="title"><#foreach>
+                  <p class="menu-left-bottom"><a href="$_{url}" ><img src="{site.Dir}themes/default/images/guide.png" width="12" height="12" />&nbsp;<span>${field.title}</span></a> </p>
+<#/foreach> 
+   </jcms:contentloop>
+            </td>
+
+        </tr>
+    </table>
+</td>

@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><jcms:site.name/>-<jcms:site.page.description/></title>
+<meta http-equiv="Content-Language" content="zh-CN" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="keywords" content="<jcms:site.page.keywords/>" />
+<meta name="description" content="<jcms:site.page.description/>" />
+<meta name="author" content="<jcms:site.author/>" />
+
+    <script type="text/javascript" src="{site.Dir}_data/global.js"></script>
+    <link href="{site.Dir}themes/default/css/style.css" rel="stylesheet" type="text/css" />
+  <link href="{site.Dir}themes/default/css/style2.css" rel="stylesheet" type="text/css" />
+    <link href="{site.Dir}themes/default/css/main.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="{site.Dir}themes/default/dist/pageSwitch.min.css">
+    <base href="<jcms:site.page.basehref />">
+</head>
+<body>
+    <table width="1000" border="0">
+
+        <!--#include virtual="/_data/shtm/header.htm" -->
+        <tr>
+            <td align="center">
+                <table width="1000px" border="0" class="tablewrap">
+                    <tr>
+
+                        <!--#include virtual="/_data/shtm/leftbar.htm" -->
+                        <td width="759px" valign="top">
+                            <table width="100%" border="0">
+                                <tr valign="top">
+
+                                    <td>
+                                        <table width="95%" border="0">
+                                            <tr class="_top">
+                                                <td align="center" valign="top" width="281px">  
+                                                <div id="container">
+	<div class="sections">
+ <jcms:contentloop channelid="2" classid="0" repeatnum="5" isimg="1" istop="1" fields="[title],[isimg],[img]">
+<#foreach>
+    <div class="section">
+ <a href="$_{url}" title="$_{title}" target="_blank"><img src="$_{img}" alt="${field.title}" title="$_{title}" /></a>
+</div>  
+   
+<#/foreach>
+   </jcms:contentloop> 
+
+	</div>
+</div>
+
+                                               </td>
+                                                <td valign="top">
+    <jcms:contentloop channelid="2" classid="0" repeatnum="8" orderfield="ishead" fields="[title],[adddate]">
+                                                   <div class="_pic"><a href="{$ChannelLink}"><img src="{site.Dir}themes/default/images/hotjob2.png" width="468" height="30" /></a></div>
+                                                    <div class="newslist newslisttop">
+                                                    
+                                                            <ul>
+                                                                <#foreach>
+                                                                    <li><a href="$_{url}" title="$_{title}" target="_blank">${cutstring(field.title,54)}</a><span>${cdatestring(field.adddate,"yy-MM-dd")}</span></li>
+                                                                    <#/foreach>
+
+                                                            </ul>
+                                                      
+                                                    </div>
+  </jcms:contentloop>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table width="100%" border="0">
+                                            <tr>
+                                                <td>
+                                                    <table width="100%" border="0">
+                                                        <tr>
+                                                            <td width="48%">
+ <jcms:contentloop channelid="7" classid="0" repeatnum="9" orderfield="ishead" fields="[title],[adddate]">
+                                                                <div class="newstitle"><span>通知公告</span><a href="{$ChannelLink}">MORE</a></div>
+
+                                                                <div class="borl_r">
+                                                                  
+                                                                       
+                                                                            <ul class="newslist">
+                                                                                <#foreach>
+                                                                                    <li><a href="$_{url}" title="$_{title}" target="_blank">${cutstring(field.title,47)}</a></li>
+                                                                                    <#/foreach>
+
+                                                                            </ul>
+                                                                     
+
+
+                                                                  
+                                                                </div>
+   </jcms:contentloop>
+                                                            </td>
+                                                            <td width="49%">
+           <jcms:contentloop channelid="8" classid="0" repeatnum="9" orderfield="ishead" fields="[title],[adddate]">
+                                                                <div class="newstitle"><span>政策法规</span><a href="{$ChannelLink}">MORE</a></div>
+                                                                <div class="borl_r">
+                                                                   
+                                                             
+                                                                            <ul class="newslist">
+                                                                                <#foreach>
+                                                                                    <li><a href="$_{url}" title="$_{title}" target="_blank">${cutstring(field.title,47)}</a></li>
+                                                                                    <#/foreach>
+
+                                                                            </ul>
+                                                               
+                                                  
+
+                                                                </div>
+         </jcms:contentloop>
+                                                            </td>
+                                                        </tr>
+
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                         <br />
+                                            <tr>
+                                                <td>
+                                                    <div class="_pic _pluspic"><a href="javascript:void(0);"><img src="{site.Dir}themes/default/images/result.png" width="789" height="30" /></a></div>
+                                                    <table width="100%">
+                                                        <tr class="newslist-show">
+                                                    <jcms:classloop channelid="10"  repeatnum="3" orderfield="id" ordertype="asc">
+     
+               <jcms:contentloop  channelid="10" classid="{$ClassId}"   repeatnum="1" ordertype="asc"  fields="[title],[summary]"><#foreach>
+               
+ <td align="left"><a href="$_{url}" ><img src="{site.Dir}themes/default/images/${field.summary}" width="248" height="51" /></a></td>
+<#/foreach> 
+   </jcms:contentloop>
+     
+   </jcms:classloop>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                    </td>
+
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!--#include virtual="/_data/shtm/footer.htm" -->
+    </table>
+
+
+<script src="{site.Dir}themes/default/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="{site.Dir}themes/default/dist/pageSwitch.min.js"></script>
+<script>
+	$("#container").PageSwitch({
+		direction:'horizontal',
+		easing:'ease-in',
+		duration:1000,
+		autoPlay:true,
+		loop:'false'
+	});
+</script>
+</body>
+</html>

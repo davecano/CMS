@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><jcms:site.page.title/></title>
+<meta http-equiv="Content-Language" content="zh-CN" /><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /><meta name="keywords" content="<jcms:site.page.keywords/>" /><meta name="description" content="<jcms:site.page.description/>" /><meta name="author" content="<jcms:site.author/>" />
+<script type="text/javascript" src="{site.Dir}_libs/jquery.tools.pack.js"></script>
+<script type="text/javascript" src="{site.Dir}_data/global.js"></script>
+<link type="text/css" rel="stylesheet" href="{site.Dir}themes/default/css/style.css" />
+<link type="text/css" rel="stylesheet" href="{site.Dir}themes/default/css/main.css" />
+<base href="<jcms:site.page.basehref/>">
+<body>
+<table width="1000" border="0">
+
+        <!--#include virtual="/_data/shtm/header.htm" -->
+       <tr>
+            <td align="center">
+                <table width="1000px" border="0" class="tablewrap">
+                    <tr>
+
+                        <!--#include virtual="/_data/shtm/leftbar.htm" -->
+                        <td width="759px" valign="top">
+                            <div class="tt" >
+                                &nbsp;<img src="{site.Dir}themes/default/images/array.png" width="13" height="13" /><div class="productitle"><jcms:site.page.nav/></div>
+                            </div>
+                            <div class="tt2" style="padding:10px;text-align:center">
+                                <h1 title="{$_title}" id="title">{$_title}</h1>
+                                <div>发布时间:{$_adddate}</div>
+                            </div>
+                                 <p class="_artContent">{$Content}</p>
+                        </td>
+                    </tr>           
+                  </table>
+          </td>
+        </tr>
+
+        <!--#include virtual="/_data/shtm/footer.htm" -->
+    </table>
+
+</div>
+  
+</body>
+</html>

@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><jcms:site.page.title/></title>
+<meta http-equiv="Content-Language" content="zh-CN" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="keywords" content="<jcms:site.page.keywords/>" />
+<meta name="description" content="<jcms:site.page.description/>" />
+<meta name="author" content="<jcms:site.author/>" />
+<script type="text/javascript" src="{site.Dir}_libs/jquery.tools.pack.js"></script>
+<script type="text/javascript" src="{site.Dir}_data/global.js"></script>
+<link type="text/css" rel="stylesheet" href="{site.Dir}_data/global.css" />
+<link type="text/css" rel="stylesheet" href="{site.Dir}themes/default/css/global.css" />
+<base href="<jcms:site.page.basehref/>">
+</head>
+<body>
+<div class="jbody">
+  <!--#include virtual="/_data/shtm/header.htm" -->
+  <!--~搜索条~-->
+  <script type="text/javascript">document.write(_jcms_SearchBar('{$ChannelType}'));</script>
+  <div class="main pbody">
+    <div class="my-left">
+      <!--~位置导航~-->
+      <div class="thispagenav mt5">
+        <div class="title"> </div>
+        <div class="placenav"><jcms:site.page.nav/> </div>
+      </div>
+      <div class="contenter">
+        <div class="productbox"> {$jcms:channel(title,price0,points,isimg,img)}
+          <ul>
+<#foreach>
+            <li>
+              <div class="pic"> <a href="$_{url}" title="$_{title}" class="img" target="_blank"><img src='$_{img}' alt="${field.title}"></a> </div>
+              <div class="desc"> <a href="$_{url}" title="$_{title}" target="_blank">${cutstring(field.title,40)}</a> </div>
+              <div class="price0"> <span>市场价</span> <strong>${floatstring(field.price0,"{0:C2}")} 元</strong> </div>
+              <div class="price1"> <span>会员价</span> <strong>${floatstring(field.points,"{0:C2}")} 元</strong> </div>
+            </li>
+<#/foreach>
+            <!--总记录:{$TotalCount}-->
+            {$/jcms:channel}
+          </ul>
+          <!--分页-->
+          <div class="pages"> {$_getPageBarHTML} </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div class="my-right">
+      <div class="rightlist mt5">
+        <div class="title"><strong>{$ChannelName}</strong></div>
+        <div class="body gplist">
+          <dl>
+            <dd>
+              <ul>
+                <jcms:classloop channelid="{$ChannelId}" depth="0" repeatnum="0">
+                <li><a href="{$ClassLink}">{$ClassName}</a></li>
+                </jcms:classloop>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <!--~投票调查~-->
+      <jcms:recordloop typename="vote" wherestr="(channelid=-1 OR channelid={$ChannelId}) and Lock=0" repeatnum="1" fields="*"><#foreach>
+      <div class="rightlist mt5">
+        <div class="title"><strong>投票调查</strong></div>
+        <div class="body cssPluginVote">
+          <form id="voteform" name="voteform">
+<#if test="${notequals(cint(field.id), 0)}">
+            <table width="100%">
+              <tr>
+                <th>${field.title}</th>
+              </tr>
+            </table>
+<#if test="${notequals(field.item.count, 0)}"> <#foreach collection="${field.item}" var="item" index="m">
+            <dl>
+              <dt> <#if test="${equals(cint(field.type), 1)}">
+                <input type="checkbox" name="vote" value="${m}" />
+<#else>
+                <input type="radio" name="vote" value="${m}" />
+<#/if> </dt>
+              <dd>${item.itemtext}</dd>
+            </dl>
+<#/foreach> <#/if>
+            <div class="votesubmit">
+              <input type="button" onclick="ajaxPluginVoteAdd(${field.id},${field.type},this)" value="投票" class="LoginInput">
+              <input type="button" value="查看" class="LoginInput" onclick="window.open('{site.Dir}extends/vote/default.aspx?id=${field.id}');">
+            </div>
+<#/if>
+          </form>
+        </div>
+      </div>
+<#/foreach> </jcms:recordloop>
+      <!--~投票调查~-->
+      <div class="right-bai-du">
+        <!--#include virtual="/_data/shtm/more/5.htm" -->
+      </div>
+    </div>
+    <div class="clear">
+      <!--~清除浮动~-->
+    </div>
+  </div>
+  <!--~友情链接，频道首页要是不喜欢就删除吧~-->
+  <div class="friendlink">
+    <div class="bar1" id="LinkTab"> <a href="#LinkTab_1" class="s">合作伙伴</a> <a href="#LinkTab_2">其他链接</a> </div>
+    <div>
+      <div id="LinkBody" class="body"></div>
+      <div style="display:none;" id="LinkTab_1">
+        <ul class="imglist">
+          <jcms:recordloop typename="link" wherestr="(channelid=-1 OR channelid={$ChannelId}) and style=1" repeatnum="0" fields="*" orderfield="OrderNum"><#foreach>
+          <li><a href="${field.url}" target="_blank" title="${field.info}"><img src="${field.imgpath}" border=0 align="absmiddle" width="88" height="31"></a></li>
+<#/foreach> </jcms:recordloop>
+        </ul>
+      </div>
+      <div style="display:none;" id="LinkTab_2">
+        <ul class="txtlist">
+          <jcms:recordloop typename="link" wherestr="(channelid=-1 OR channelid={$ChannelId}) and style=0" repeatnum="0" fields="*" orderfield="OrderNum"><#foreach>
+          <li><a href="${field.url}" target="_blank" title="${field.info}">${field.title}</a></li>
+<#/foreach> </jcms:recordloop>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">var iTab_link = new jTab('LinkTab','LinkBody','more');</script>
+  <!--~友情链接，频道首页要是不喜欢就删除吧~-->
+  <!--~页面底部~-->
+  <!--#include virtual="/_data/shtm/footer.htm" -->
+</div>
+<script type="text/javascript">$('#topnav li.channel{$ChannelId}').addClass("current");</script>
+</body>
+</html>

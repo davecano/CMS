@@ -1,0 +1,25 @@
+*{
+		padding: 0;
+		margin: 0;
+	}
+	html,body{
+		height: 100%;
+	}
+	#container {
+			width: 281px;
+			height: 270px;
+			overflow: hidden;
+	}
+	.sections,.section {
+		height:100%;
+	}
+	#container,.sections {
+		position: relative;
+	}
+	.section {
+		background-color: #000;
+		background-size: cover;
+		background-position: 50% 50%;
+		text-align: center;
+		color: white;
+	}

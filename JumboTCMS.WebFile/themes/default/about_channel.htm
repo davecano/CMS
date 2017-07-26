@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html PUBliC "-//W3C//DTD html 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title><jcms:site.page.title/></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link type="text/css" rel="stylesheet" href="{site.Dir}about/css/style.css" />
+<script type="text/javascript" src="{site.Dir}_libs/jquery.tools.pack.js"></script>
+<script type="text/javascript" src="{site.Dir}_data/global.js"></script>
+</head>
+<body id="ad">
+<div class="top">
+  <div class="top-logo">
+    <div class="top-nav"> <a href="<jcms:site.url/>">Back Home</a> </div>
+  </div>
+</div>
+<div id="mainbg">
+  <div id="right">
+    <div> <img src="{site.Dir}about/images/pic-1.jpg" width="715" height="150"></div>
+    <div class="text">
+<jcms:contentloop channelid="{$ChannelId}" classid="0" repeatnum="1" fields="title" ordertype="asc">
+<#foreach>
+      <h1> ${field.title}</h1>
+      ${field.content}
+<#/foreach>
+</jcms:contentloop>
+    </div>
+    <div id="footer"> <jcms:site.name/>&nbsp; 版权所有 <a href="http://www.miibeian.gov.cn/">{site.ICP}</a></div>
+  </div>
+  <div id="left">
+    <div id="left-menu" class="left-menu">
+      <ul>
+<jcms:contentloop channelid="{$ChannelId}" classid="0" repeatnum="30" fields="title" ordertype="asc">
+<#foreach>
+<#if test="${equals(cint(field.id),1)}">
+        <li class="currently"><a href="$_{url}" title="$_{title}">${field.title}</a></li>
+<#else>
+        <li><a href="$_{url}" title="$_{title}">${field.title}</a></li>
+<#/if>
+<#/foreach>
+</jcms:contentloop>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>

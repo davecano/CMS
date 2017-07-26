@@ -1,0 +1,17 @@
+<tr>
+    <td><img src="{site.Dir}themes/default/images/logo.jpg" width="1358" height="172" /></td>
+</tr>
+<tr align="center">
+    <td height="36">
+        <table width="1000px" border="0" cellspacing="0">
+            <tr class="main">
+                    <td width="16.67%" align="center"><a href="/">首页</a></td>
+                <jcms:channelloop repeatnum="4" orderfield="pid" ordertype="asc">
+                    <td width="16.67%" align="center"><a href="{$ChannelLink}" title="{$ChannelName}"><span>{$ChannelName}</span></a></td>
+</jcms:channelloop>
+                <td width="16.67%" align="center"><a href="/connect/connectus.shtml">联系我们</a></td>
+            </tr>
+        </table>
+       <hr size="3" style="background:#0265b2; margin-top:11px;" />
+    </td>
+</tr>

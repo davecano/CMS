@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><jcms:site.name/>-<jcms:site.page.description/></title>
+<meta http-equiv="Content-Language" content="zh-CN" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="keywords" content="<jcms:site.page.keywords/>" />
+<meta name="description" content="<jcms:site.page.description/>" />
+<meta name="author" content="<jcms:site.author/>" />
+    <script type="text/javascript" src="{site.Dir}_data/global.js"></script>
+    <link href="{site.Dir}themes/default/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="{site.Dir}themes/default/css/main.css" rel="stylesheet" type="text/css" />
+    
+    <base href="<jcms:site.page.basehref />">
+        <script type="text/javascript">
+      function Iframe() {
+          var iframe = document.getElementById("rightframe");
+          //iframe.height = "100px";
+          try {
+              var bHeight = iframe.contentWindow.document.body.scrollHeight;
+              var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
+
+              var height = Math.max(bHeight, dHeight);
+              if (height > 600) {
+                  iframe.height = height;
+              }
+              else iframe.height = 600;
+          } catch (ex) { }
+      }
+      window.setInterval("Iframe()", 200);
+    </script>
+
+</head>
+<body>
+    <table width="1000" border="0">
+
+        <!--#include virtual="/_data/shtm/header.htm" -->
+        <tr>
+            <td align="center">
+                <table width="1000px" border="0" class="tablewrap">
+                    <tr>
+
+                        <!--#include virtual="/_data/shtm/leftbar.htm" -->
+                        <td width="759px" align="center" valign="top">
+                           
+                    <iframe src="http://192.168.1.106:8840/SearchCatalog.aspx" name="right" width="759"  height="800" id="rightframe" onscroll="no"  frameborder="0" border="0" runat="server">您的浏览器不支持嵌入式框架，或者当前配置为不显示嵌入式框架。
+                    </iframe>
+                           
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!--#include virtual="/_data/shtm/footer.htm" -->
+    </table>
+
+
+
+</body>
+</html>
